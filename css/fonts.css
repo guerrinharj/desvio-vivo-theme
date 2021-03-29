@@ -1,0 +1,74 @@
+@font-face {
+	font-family: 'Pilat';
+	src:  url('fonts/Pilat Regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+
+  @font-face {
+	font-family: 'Pilat Bold';
+	src:  url('fonts/Pilat Bold.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+  @font-face {
+	font-family: 'Pilat Demi';
+	src:  url('fonts/Pilat Demi.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+
+  @font-face {
+	font-family: 'Pilat Light';
+	src:  url('fonts/Pilat Light.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+  @font-face {
+	font-family: 'Pilat Extended';
+	src:  url('fonts/Pilat Extended Regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+  @font-face {
+	font-family: 'Pilat Extended Bold';
+	src:  url('fonts/Pilat Extended Bold.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+  @font-face {
+	font-family: 'Pilat Extended Light';
+	src:  url('fonts/Pilat Extended Light.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+
+  @font-face {
+	font-family: 'Pilat Wide';
+	src:  url('fonts/Pilat Wide Regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+  @font-face {
+	font-family: 'Pilat Wide Bold';
+	src:  url('fonts/Pilat Wide Bold.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+  @font-face {
+	font-family: 'Pilat Wide Light';
+	src:  url('fonts/Pilat Wide Light.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+  
