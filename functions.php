@@ -136,6 +136,15 @@ function desvio_vivo_theme_widgets_init() {
 }
 add_action( 'widgets_init', 'desvio_vivo_theme_widgets_init' );
 
+function custom_scripts_method()
+{
+wp_register_script('customscripts', get_template_directory_uri() . '/js/jquery.min.js', array('jquery'), '1.0.0', true);
+wp_enqueue_script('customscripts');
+}
+
+add_action('wp_enqueue_scripts', 'custom_scripts_method');
+
+
 /**
  * Enqueue scripts and styles.
  */
@@ -148,8 +157,8 @@ function desvio_vivo_theme_scripts() {
 	wp_enqueue_style( 'desvio-vivo-theme-fonts', get_template_directory_uri() . '/css/fonts.css');
 	
 	wp_enqueue_script( 'desvio-vivo-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
 	wp_enqueue_script( 'desvio-theme-main', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true );
+	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -209,3 +218,22 @@ function abe_gsap() {
 
 }
 add_action( 'wp_enqueue_scripts', 'abe_gsap' );	
+
+// Tirar zoom
+function remove_image_zoom_support() {
+    remove_theme_support( 'wc-product-gallery-zoom' );
+}
+add_action( 'wp', 'remove_image_zoom_support', 100 );
+
+//Mudar nome da pagina thank you
+
+
+add_filter( 'the_title', 'woo_title_order_received', 10, 2 );
+
+function woo_title_order_received( $title, $id ) {
+	if ( function_exists( 'is_order_received_page' ) && 
+	     is_order_received_page() && get_the_ID() === $id ) {
+		$title = "Pedido";
+	}
+	return $title;
+}

@@ -1,24 +1,38 @@
 <div class="hero-container"> 
+	<div class="titulo">
+	<?php 			
+					$args = array(
+						'category_name' => 'titulo',
+						'posts_per_page' => 2,
+						'order' => 'ASC'
+					);
 
-		<div class="hero-box"> 
-			<div id="apoie"> Apoie a nossa campanha </div>
-			<div id="desvio-hero"> Desvio </div>
-			<div id="vivo"> 
-                <span> Viv </span> 
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/circulo-gordinho" alt="Circulos" />
-            </div>			
-		</div>
+					$loop = new WP_Query( $args ); 
+					
+					if ( $loop->have_posts() ) : 
+						while ( $loop->have_posts() ) : $loop->the_post(); 
+						get_template_part('template-parts/content-titulo');
+						endwhile; 
+					endif; 
+					?>	
+	</div>
 
-	
+	<div class="sobre">
+	<?php 			
+					$args = array(
+						'category_name' => 'sobre',
+						'posts_per_page' => 2,
+						'order' => 'ASC'
+					);
 
-	<div class="hero-video">
+					$loop = new WP_Query( $args ); 
+					
+					if ( $loop->have_posts() ) : 
+						while ( $loop->have_posts() ) : $loop->the_post(); 
+						get_template_part('template-parts/content-sobre');
+						endwhile; 
+					endif; 
+					?>	
 
-    <video width="520" height="340" controls> 
-		<source src="<?php echo get_template_directory_uri(); ?>/assets/oficial.mp4" type="video/mp4" muted> 
-	</video>
-
-    </div>
-		
-
-
+	</div>
 </div>

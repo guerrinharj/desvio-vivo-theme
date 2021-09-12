@@ -19,8 +19,6 @@ defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_cart' ); ?>
 
-
-
 <div class="the-cart"> 
 
 
@@ -150,8 +148,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 						</div>
 					<?php } ?>
 
-					<button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
-
+					<div class="button-container">
+						<button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+					</div>	
+				
 					<?php do_action( 'woocommerce_cart_actions' ); ?>
 
 					<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
@@ -180,5 +180,3 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 
 </div>
-
-<div class="cart-area-bg"> <img src="<?php echo get_template_directory_uri(); ?>/assets/circulos"/> </div>

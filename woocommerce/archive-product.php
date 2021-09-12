@@ -2,21 +2,16 @@
 
 
 
-<div class="hero">
-
+<div class="upper hero">
 	<?php 
 	get_template_part('template-parts/content-hero');
 	?>
-
-
 </div>
 
-
-<div class="about"> 
-
-					<?php 			
+<div class="chamada">
+	<?php 			
 					$args = array(
-						'category_name' => 'quem-somos',
+						'category_name' => 'chamada',
 						'posts_per_page' => 2,
 						'order' => 'ASC'
 					);
@@ -25,44 +20,21 @@
 					
 					if ( $loop->have_posts() ) : 
 						while ( $loop->have_posts() ) : $loop->the_post(); 
-						get_template_part('template-parts/content-about');
+						get_template_part('template-parts/content-chamada');
 						endwhile; 
 					endif; 
 					?>	
-
-
-					<?php 			
-					$args = array(
-						'category_name' => 'por-que',
-						'posts_per_page' => 2,
-						'order' => 'ASC'
-					);
-
-					$loop = new WP_Query( $args ); 
-					
-					if ( $loop->have_posts() ) : 
-						while ( $loop->have_posts() ) : $loop->the_post(); 
-						get_template_part('template-parts/content-about');
-						endwhile; 
-					endif; 
-					?>	
-</div>
-
-
-
-
-
-<div class="campanha">
-
-	<div class="campanha-title"> 
-		<span> Apoie nossa casa e nos ajude a continuar apoiando nossa equipe, coletivos e artistas independentes que aqui habitam </span>
 	</div>
-			
-
-</div>
 
 
 
+<div class="lower">
+
+	<div class="photo-area">
+
+	</div>
+
+	<div class="products-area">
 
 <?php
 /**
@@ -96,6 +68,7 @@ do_action( 'woocommerce_before_main_content' );
 
 ?>
 <header class="woocommerce-products-header">
+
 
 
 
@@ -175,4 +148,9 @@ do_action( 'woocommerce_after_main_content' );
 
 get_footer( 'shop' );
 
+?>
+
+	</div>
+
+</div>
 

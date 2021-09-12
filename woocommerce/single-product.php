@@ -62,7 +62,11 @@ get_header( 'shop' ); ?>
 
 </div>
 
+<div class="voltar">
+	<a href="/"> Voltar </a>
+</div>
+
 <?php
-get_footer( 'shop' );
+get_footer();
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

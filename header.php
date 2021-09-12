@@ -28,24 +28,6 @@
 
 	<header id="masthead" class="site-header">
 
-	<div class="logo">
-
-			
-		<div class="logo-container"> 
-			<a href="<?php bloginfo('url'); ?>">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/desvio_marca_preto.png" alt="Logo" />
-			</a>
-		</div>	
-
-		<div class="back"> 
-		<a href="<?php bloginfo('url'); ?>">
-		&larr;
-		</a>
-	</div>
-
-
-	</div>
-
 
 		
 	</header><!-- #masthead -->
