@@ -65,6 +65,12 @@ color: black;
 .chamada p {
     border-bottom: solid 1px #000;
     padding-bottom: 4px;
+    transition: 0.5s ease;
+}
+
+.chamada p:hover {
+   transition: 0.5s ease;
+    padding-bottom: 10px;
 }
 
 .lower {
@@ -83,6 +89,10 @@ color: black;
     background-position: center;
     background-size:cover;
 
+}
+
+.photo-area:hover {
+    filter: invert(1)
 }
 
 /* REAL CONTAINER DA AREA DE PRODUTOS */
@@ -759,7 +769,7 @@ h2.woocommerce-column__title, .woocommerce-column__title, p.woocommerce-notice.w
 
 /* LIVRO */
 
-.dp-element {
+div#df_29 {
     height: 100vh!important;
 }
 
@@ -998,6 +1008,13 @@ h2.woocommerce-column__title, .woocommerce-column__title, p.woocommerce-notice.w
     .woocommerce-order-received .voltar {
         padding: 6rem;
         justify-content: center;
+    }
+
+    .df-3dcanvas {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 25%;
     }
 
 
