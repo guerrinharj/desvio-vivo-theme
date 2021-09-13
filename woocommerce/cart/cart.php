@@ -179,4 +179,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 </div>
 
 
+
+</div>
+
+<div class="voltar">
+	<a href="/"> Voltar </a>
 </div>

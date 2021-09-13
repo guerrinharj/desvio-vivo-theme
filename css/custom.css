@@ -83,9 +83,10 @@ color: black;
     width: 50%;
 }
 
-.lower .photo-area {
 
-    background-image: url('../assets/imagemtestedesvio.png');
+.lower .inner-photo-area {
+    width: 100%;
+    height: 100%;
     background-position: center;
     background-size:cover;
 
@@ -761,7 +762,7 @@ h2.woocommerce-column__title, .woocommerce-column__title, p.woocommerce-notice.w
     justify-content: center;
 }
 
-.woocommerce-order-received .voltar {
+.woocommerce-order-received .voltar, .woocommerce-cart .voltar,  .woocommerce-checkout .voltar {
     justify-content: flex-end;
 }
 
@@ -1005,7 +1006,7 @@ div#df_29 {
         padding-right: 2rem;
     }
 
-    .woocommerce-order-received .voltar {
+    .woocommerce-order-received .voltar, .woocommerce-cart .voltar, .woocommerce-checkout .voltar  {
         padding: 6rem;
         justify-content: center;
     }
