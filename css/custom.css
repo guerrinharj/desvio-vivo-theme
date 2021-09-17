@@ -775,8 +775,21 @@ div#df_29 {
 }
 
 
+@media (max-width: 1100px) {
 
+    .upper .titulo-container h2 p {
+        font-size: 10.8rem
+    }
 
+}
+
+@media (max-width: 1332px) {
+
+    .upper .titulo-container h2 p {
+        font-size: 13.5rem
+    }
+
+}
 
 
 
@@ -818,9 +831,9 @@ div#df_29 {
 
     .chamada {
         position: absolute;
-        top: 30px;
-        right: 0px;
-        writing-mode: vertical-lr;
+        top: 33%;
+        left: 33%;
+        writing-mode: horizontal-tb;
     }
 
     .chamada p {
