@@ -3,27 +3,28 @@
 
 
 <div class="upper hero">
-	<?php 
+	<?php
 	get_template_part('template-parts/content-hero');
 	?>
 </div>
 
 <div class="chamada">
-	<?php 			
+  AIAIAIAI
+	<?php
 					$args = array(
 						'category_name' => 'chamada',
 						'posts_per_page' => 2,
 						'order' => 'ASC'
 					);
 
-					$loop = new WP_Query( $args ); 
-					
-					if ( $loop->have_posts() ) : 
-						while ( $loop->have_posts() ) : $loop->the_post(); 
+					$loop = new WP_Query( $args );
+
+					if ( $loop->have_posts() ) :
+						while ( $loop->have_posts() ) : $loop->the_post();
 						get_template_part('template-parts/content-chamada');
-						endwhile; 
-					endif; 
-					?>	
+						endwhile;
+					endif;
+					?>
 	</div>
 
 
@@ -32,21 +33,21 @@
 
 	<div class="photo-area">
 
-		<?php 			
+		<?php
 						$args = array(
 							'category_name' => 'foto',
 							'posts_per_page' => 1,
 							'order' => 'ASC'
 						);
 
-						$loop = new WP_Query( $args ); 
-						
-						if ( $loop->have_posts() ) : 
-							while ( $loop->have_posts() ) : $loop->the_post(); 
+						$loop = new WP_Query( $args );
+
+						if ( $loop->have_posts() ) :
+							while ( $loop->have_posts() ) : $loop->the_post();
 							get_template_part('template-parts/content-photo');
-							endwhile; 
-						endif; 
-						?>	
+							endwhile;
+						endif;
+						?>
 	</div>
 
 	<div class="products-area">
@@ -128,7 +129,7 @@ if ( woocommerce_product_loop() ) {
 		}
 	}
 
-	
+
 
 	woocommerce_product_loop_end();
 
@@ -168,4 +169,3 @@ get_footer( 'shop' );
 	</div>
 
 </div>
-
