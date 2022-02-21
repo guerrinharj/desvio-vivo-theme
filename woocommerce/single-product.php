@@ -66,6 +66,24 @@ get_header( 'shop' ); ?>
 	<a href="/"> Voltar </a>
 </div>
 
+  <div class="sponsor-area">
+  	<?php
+					$args = array(
+						'category_name' => 'patrocinio',
+						'posts_per_page' => 2,
+						'order' => 'ASC'
+					);
+
+					$loop = new WP_Query( $args );
+
+					if ( $loop->have_posts() ) :
+						while ( $loop->have_posts() ) : $loop->the_post();
+						get_template_part('template-parts/content-patrocinio');
+						endwhile;
+					endif;
+					?>
+  </div>
+
 <?php
 get_footer();
 

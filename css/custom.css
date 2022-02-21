@@ -218,6 +218,38 @@ ul {
   height: 50px;
 }
 
+
+
+/* PROJECT PAGE  */
+
+.projeto {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+}
+
+.projeto-container {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+
+.projeto img {
+  width: 100%;
+}
+
+.projeto .voltar {
+  top: 5%;
+  left: 2%;
+  position: fixed;
+}
+
+.projeto-container p {
+  text-transform: initial;
+}
+
+
 /* PRODUCT PAGE */
 
 .single-product-wrapper {
@@ -913,6 +945,16 @@ div#df_29 {
     .sponsor-area {
       position: relative;
       flex-direction: row;
+    }
+
+    .projeto-container {
+      width: 95%;
+    }
+
+    .projeto .voltar {
+    background-color: white;
+    border: solid 1px black;
+    padding: 5px;
     }
 
     .products {
