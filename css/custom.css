@@ -1,5 +1,5 @@
 
-  
+
 body {
 	font-family: 'Helvetica Neue', sans-serif;
 	background-color: #FFF;
@@ -14,6 +14,28 @@ text-decoration: none;
 color: black;
 }
 
+.age-restriction button {
+  background-color: white;
+  border: solid 1px black;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: 0.2s ease;
+  color: black;
+}
+
+.age-restriction button:hover {
+  background-color: black;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.age-restriction img.age-gate-logo-image {
+    width: 70%;
+}
+
+.age-resctriction .age-gate-challenge, .age-gate-message {
+    margin: 0 0 30px;
+}
 
 .upper {
     display: flex;
@@ -62,13 +84,21 @@ color: black;
     right: 20px;
 }
 
-.chamada p {
+.chamada ul, .chamada li {
+  list-style-type: none;
+}
+
+.chamada li {
+  margin-bottom: 18px;
+}
+
+.chamada ul li a {
     border-bottom: solid 1px #000;
     padding-bottom: 4px;
     transition: 0.5s ease;
 }
 
-.chamada p:hover {
+.chamada ul li a:hover {
    transition: 0.5s ease;
     padding-bottom: 10px;
 }
@@ -153,7 +183,7 @@ ul {
     transition: 10s ease
 }
 
-  
+
 
 .lower .price {
     display: none;
@@ -173,6 +203,20 @@ ul {
     bottom: 10px;
 }
 
+.sponsor-area {
+  position: fixed;
+  bottom: -1%;
+  right: 0;
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse
+}
+
+.sponsor-area img {
+  width: 80px;
+  height: 50px;
+}
 
 /* PRODUCT PAGE */
 
@@ -832,8 +876,17 @@ div#df_29 {
     .chamada {
         position: absolute;
         top: 33%;
-        left: 33%;
+        left: 0%;
         writing-mode: horizontal-tb;
+    }
+
+    .chamada ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .chamada li {
+      margin-left: 15px
     }
 
     .chamada p {
@@ -855,6 +908,11 @@ div#df_29 {
     .lower .photo-area {
         height: 100vh;
         width: 100%;
+    }
+
+    .sponsor-area {
+      position: relative;
+      flex-direction: row;
     }
 
     .products {
@@ -1033,13 +1091,3 @@ div#df_29 {
 
 
 }
-
-
-
-
-
-
-
-
-
-
