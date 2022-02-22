@@ -155,10 +155,10 @@ function desvio_vivo_theme_scripts() {
 	wp_enqueue_style( 'desvio-vivo-theme-custom', get_template_directory_uri() . '/css/custom.css');
 
 	wp_enqueue_style( 'desvio-vivo-theme-fonts', get_template_directory_uri() . '/css/fonts.css');
-	
+
 	wp_enqueue_script( 'desvio-vivo-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'desvio-theme-main', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true );
-	
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -207,7 +207,7 @@ function abe_polyfills() {
 	wp_enqueue_script( 'polyfill-io' );
 
 }
-add_action( 'wp_enqueue_scripts', 'abe_polyfills' );	
+add_action( 'wp_enqueue_scripts', 'abe_polyfills' );
 
 
 // Register Script
@@ -217,7 +217,7 @@ function abe_gsap() {
 	wp_enqueue_script( 'gsap' );
 
 }
-add_action( 'wp_enqueue_scripts', 'abe_gsap' );	
+add_action( 'wp_enqueue_scripts', 'abe_gsap' );
 
 // Tirar zoom
 function remove_image_zoom_support() {
@@ -231,9 +231,19 @@ add_action( 'wp', 'remove_image_zoom_support', 100 );
 add_filter( 'the_title', 'woo_title_order_received', 10, 2 );
 
 function woo_title_order_received( $title, $id ) {
-	if ( function_exists( 'is_order_received_page' ) && 
+	if ( function_exists( 'is_order_received_page' ) &&
 	     is_order_received_page() && get_the_ID() === $id ) {
 		$title = "Pedido";
 	}
 	return $title;
+}
+
+add_filter( 'woocommerce_product_add_to_cart_text', 'bbloomer_archive_custom_cart_button_text' );
+
+function bbloomer_archive_custom_cart_button_text( $text ) {
+   global $product;
+   if ( $product && ! $product->is_in_stock() ) {
+      return '';
+   }
+   return $text;
 }
