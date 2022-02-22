@@ -111,6 +111,7 @@ color: black;
 
  .photo-area, .products-area {
     width: 50%;
+    position: relative;
 }
 
 
@@ -124,6 +125,24 @@ color: black;
 
 .photo-area:hover {
     filter: invert(1)
+}
+
+.product-area {
+  pointer-events: none;
+}
+
+.em-breve {
+    background-color: white;
+    position: absolute;
+    z-index: 40;
+    padding: 120px 180px;
+    opacity: 0.9;
+    font-size: 3rem;
+    font-weight: 800;
+    transform: translate(10px, 10px);
+    text-align: center;
+    margin: 40px;
+    pointer-events: none;
 }
 
 /* REAL CONTAINER DA AREA DE PRODUTOS */
@@ -940,6 +959,11 @@ div#df_29 {
     .lower .photo-area {
         height: 100vh;
         width: 100%;
+    }
+
+    .em-breve {
+      margin: 0;
+      padding: 180px 90px;
     }
 
     .sponsor-area {
