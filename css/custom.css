@@ -135,14 +135,15 @@ color: black;
     background-color: white;
     position: absolute;
     z-index: 40;
-    padding: 120px 180px;
+    padding: 150px 0;
     opacity: 0.9;
     font-size: 3rem;
     font-weight: 800;
     transform: translate(10px, 10px);
     text-align: center;
-    margin: 40px;
+    position: absolute;
     pointer-events: none;
+    width: 100%;
 }
 
 /* REAL CONTAINER DA AREA DE PRODUTOS */
@@ -171,7 +172,9 @@ ul {
     width: 100%;
     margin: auto;
     height: 100%;
-    position: relative
+    position: relative;
+    /* RETIRAR QUANDO FOR PERMITIDO */
+    pointer-events: none;
 }
 
 .product {
@@ -963,12 +966,16 @@ div#df_29 {
 
     .em-breve {
       margin: 0;
-      padding: 180px 90px;
+      padding: 192px;
     }
 
     .sponsor-area {
       position: relative;
       flex-direction: row;
+    }
+
+    .projeto p {
+      font-family: monospace
     }
 
     .projeto-container {
