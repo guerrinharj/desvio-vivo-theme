@@ -144,6 +144,7 @@ color: black;
     position: absolute;
     pointer-events: none;
     width: 100%;
+    display: none;
 }
 
 /* REAL CONTAINER DA AREA DE PRODUTOS */
@@ -173,8 +174,6 @@ ul {
     margin: auto;
     height: 100%;
     position: relative;
-    /* RETIRAR QUANDO FOR PERMITIDO */
-    pointer-events: none;
 }
 
 .product {
@@ -286,6 +285,24 @@ ul {
     align-items: center;
     width: 50%;
 }
+
+   .woocommerce-product-gallery {
+    width: 30vw;
+}
+
+.woocommerce-product-gallery__wrapper img {
+  margin-right: 30px;
+}
+
+    .woocommerce-product-gallery ol{
+    display: flex;
+    list-style: none;
+}
+
+  .woocommerce-product-gallery li {
+    width: 90px;
+    margin-right: 1rem;
+  }
 
 .woocommerce-product-gallery__image {
     filter: grayscale(1);
@@ -1144,6 +1161,10 @@ div#df_29 {
         width: auto;
         height: auto;
     }
+
+    .woocommerce-product-gallery {
+    width: 100vw;
+}
 
     .single-product .voltar {
         justify-content: flex-end;
