@@ -236,7 +236,7 @@ ul {
 
 .sponsor-area img {
   width: 80px;
-  height: 50px;
+  height: 40px;
 }
 
 
@@ -1167,8 +1167,15 @@ div#df_29 {
 }
 
     .single-product .voltar {
-        justify-content: flex-end;
-        padding-right: 2rem;
+      justify-content: flex-end;
+      padding-right: 2rem;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+    }
+
+    .single-product .sponsor-area {
+      display: none;
     }
 
     .woocommerce-order-received .voltar, .woocommerce-cart .voltar, .woocommerce-checkout .voltar  {
